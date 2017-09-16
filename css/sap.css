@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+.titulo{
+  color: #33658a !important;
+  background-color: #F5F3EA !important;
+  font-size: 16px !important;
+  
+  /*font-size: 26px !important;*/
+
+}
+.industrial{
+  background-color: #fdc966;
+}
+.bg-primary{
+  color: #F5F3EA !important;
+  background-color: #33658a !important;
+  
+  /*font-size: 18px !important;*/
+}
+
+.panel-body{
+  background-color: #F5F3EA;
+}
+
+.table{
+  background-color: #F5F3EA;
+  font-size: 14px !important;
+}
+
+th{
+  text-align: center;
+  
+}
+
+.panel-footer{
+  color: #33658a !important;
+  background-color: #F5F3EA !important;
+  font-size: 18px !important;
+
+}
+
+.vertical-center{
+  min-height: 100%; /*para navegadores que no soportan unidad vh*/
+  min-height: 100vh; /*estas dos lineas son contadas como una*/
+  display: flex;
+  align-items: center;
+}

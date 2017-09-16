@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="monSAP">
+
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv=refresh content=180>-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitorización SAP</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/sap.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+  <!-- jQuery library-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="container-fluid">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <div class="container-fluid">
+              <div class="panel panel-header titulo text-center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <center><img src="css/images/logo_grupodamm.gif" class="img-responsive" width="150" height="100"><h2><b>Monitorización SAP</b></h2></center>
+
+                <div class="panel-body col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="table table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <table class="table table-bordered col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 panel-body">
+                      <thead class="panel-body">
+                        <tr>
+                          <th class="bg-primary"><a href="#!power8" role="button" class="btn btn-lg btn-xs titulo">Power8 <i class="fa fa-server" aria-hidden="true"></i></a></th>
+                          <th class="bg-primary"><a href="#!power7" role="button" class="btn btn-lg btn-xs titulo">Power7 <i class="fa fa-server" aria-hidden="true"></i></a></th>
+                        </tr>
+                        <tr>
+                          <th class="bg-primary"><a href="#!iseries" role="button" class=" btn btn-xs titulo">iSeries <i class="fa fa-server" aria-hidden="true"></i></a></th>
+                          <th class="bg-primary"><a href="#!AIX" role="button" class="btn btn-xs titulo">AIX <i class="fa fa-server" aria-hidden="true"></i></a></th>
+                        </tr>
+                      </thead>
+                      <tbody class="panel-body">
+                        <tr>
+                          <td>
+                            <center><a href="#!SAPR3" role="button" class="btn btn-primary bg-primary">SAP R3</a></center>
+                          </td>
+                          <td>
+                            <center><a href="#!crm" role="button" class="btn btn-primary bg-primary">SAP CRM</a></center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <center><a href="#!netweaver" role="button" class="btn btn-primary bg-primary">SAP NW</a></center>
+                          </td>
+                          <td>
+                            <center><a href="#" role="button" class="btn btn-primary bg-primary">TFIM</a></center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <center><a href="#" role="button" class="btn btn-primary bg-primary">SRM</a></center>
+                          </td>
+                          <td>
+                            <center><a href="#!Oracle" role="button" class="btn btn-primary bg-primary">Oracle</a></center>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="panel-footer col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><button type="button" class="btn btn-xs bg-primary" data-toggle="collapse" data-target="#radio"><i class="fa fa-refresh" aria-hidden="true"> Refresco</i></button></div>
+                <div id="radio" class="collapse" ng-app="monSAP" ng-controller="refreshController">
+                  <form class="btn btn-xs">
+                    <label class="radio-inline"><input type="radio" name="optradio" value="Stop" ng-click="Stop()">Stop refresco</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" value= "Minute" ng-click="Minute()">1 min.</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" value= "Minute3" ng-click="Minute3()">3 min.</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" value= "Minute5" ng-click="Minute5()">5 min.</label>
+                  </form>
+<h3>{{counter}} {{message}} <i class="fa fa-hourglass-start" aria-hidden="true"></i></h3>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div ng-init="Refresh()" class="ng-view col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+
+          <!-- angular templating -->
+          <!-- this is where content will be injected -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--AngularJS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="js/monSAP.js"></script>
+</body>
+
+</html>

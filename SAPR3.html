@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="panel-heading titulo col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <h1 class="text-center"><b>SAP R3</b></h1>
+  </div>
+  <div class="panel-body col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="asdap col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-controller="refreshController">
+      <center><img class="img-responsive" src="http://172.23.13.140//lpar2rrd-cgi/detail-graph.sh?host=dammhmc1.ad.damm.es&server=S824_01-8286-42A-SN21FE46V&lpar=ASDAP&item=lpar&time=d&type_sam=m&detail=0&upper=10.054&entitle=0&none=-1502096106"></center>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#sapModal">
+  	<span ></span><i class="fa fa-search-plus" aria-hidden="true"> Zoom</i>
+  </button>
+    <!-- Modal -->
+    <div class="modal fade" id="sapModal" role="dialog">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-body titulo">
+            <h4 class=" text-center panel-header titulo"><b>SAP R3</b></h4>            
+            <img class="img-responsive" src="http://172.23.13.140/lpar2rrd-cgi/detail-graph.sh?host=dammhmc1.ad.damm.es&server=S824_01-8286-42A-SN21FE46V&lpar=ASDAP&item=lpar&time=d&type_sam=m&detail=1&upper=10.054&entitle=0&none=none&none=1502094362"
+            />
+          </div>
+          <div class="modal-footer titulo">
+            <button type="button" class="btn bg-primary" data-dismiss="modal">Cerrar <i class="fa fa-times-circle" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
